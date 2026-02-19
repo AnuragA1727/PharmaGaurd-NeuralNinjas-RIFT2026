@@ -15,7 +15,7 @@ PharmaGuard analyzes your genetic VCF data to predict personalized drug risks us
 
 ## 🎥 LinkedIn Demo Video
 
-**[Watch on LinkedIn](#)** ← Replace with your LinkedIn video URL  
+**[Watch on LinkedIn](#)** 
 Tagged: RIFT 2026 · #RIFT2026 #PharmaGuard #Pharmacogenomics #AIinHealthcare
 
 ---
@@ -52,13 +52,13 @@ pharma/
 
 | Layer | Technology |
 |-------|-----------|
-| Framework | Next.js 16 (App Router) |
-| Language | TypeScript |
+| Frontend | Vanilla JavaScript(HTML/CSS) |
+| Backend | Serverless Functions (node.js) |
 | Styling | Vanilla CSS with Glassmorphism |
 | AI/LLM | Google Gemini 1.5 Flash |
 | Genomics | Custom VCF v4.2 Parser |
 | Guidelines | CPIC (Clinical Pharmacogenetics Consortium) |
-| Deployment | Vercel / Netlify / Render |
+| Deployment | Vercel (Serverless) |
 
 ---
 
@@ -194,9 +194,18 @@ npm run build
 
 | Name | Role |
 |------|------|
-| ← Add your team members here | — |
+| Priyanhu Singh (leader) | Business logic |
+| Anurag Arora | Backend,Testing |
+| Himanshi Shakya| UI Designing |
+| Himanshu Yadav | Backend,Testing |
 
 ---
+
+## Future Updates
+- Expand Gene & Drug Coverage
+- Integration of database for history according to patients
+- Batch Processing
+- Advanced AI & Explainability
 
 ## ⚠️ Disclaimer
 
