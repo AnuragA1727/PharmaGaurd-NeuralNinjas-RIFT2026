@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PharmaGuard — AI-powered pharmacogenomic risk prediction. Upload your VCF file to get personalized drug safety assessments powered by CPIC guidelines and Google Gemini AI." />
+  <title>PharmaGuard · AI Pharmacogenomics Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>" />
+</head>
+<body>
+  <!-- Background blobs -->
+  <div class="blob-cyan"></div>
+  <div class="blob-violet"></div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">🧬</div>
+        <span class="logo-text">Pharma<span style="background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Guard</span></span>
+      </a>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <span class="chip chip-cyan">🏆 RIFT 2026 Finalist</span>
+        <span style="color:var(--text-muted);font-size:13px;">Pharmacogenomics AI Track</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gene strip -->
+  <div class="gene-strip">
+    <span style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase;margin-right:6px;">Supported Genes</span>
+    <span class="chip chip-violet">CYP2D6</span>
+    <span class="chip chip-violet">CYP2C19</span>
+    <span class="chip chip-violet">CYP2C9</span>
+    <span class="chip chip-violet">SLCO1B1</span>
+    <span class="chip chip-violet">TPMT</span>
+    <span class="chip chip-violet">DPYD</span>
+    <span style="color:var(--text-muted);font-size:12px;margin-left:6px;">· Powered by CPIC Guidelines</span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div style="flex:1;min-width:300px;">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        AI-Powered Precision Medicine
+      </div>
+      <h1>Prevent Drug<br/><span class="gradient-text">Adverse Reactions</span><br/>With Your DNA</h1>
+      <p>
+        Upload your genetic VCF file and get personalized pharmacogenomic risk
+        predictions for <strong>6 critical drugs</strong>, powered by CPIC guidelines
+        and <span style="color:var(--cyan);font-weight:700;">Google Gemini AI</span>.
+      </p>
+      <div class="hero-features">
+        <span class="hero-feature">💊 6 Critical Genes</span>
+        <span class="hero-feature">🔬 CPIC Guidelines</span>
+        <span class="hero-feature">🤖 Gemini AI Explanations</span>
+        <span class="hero-feature">📋 JSON API Output</span>
+      </div>
+      <a href="#upload-section" class="btn-primary" style="text-decoration:none;">
+        🧬 Start Analysis
+        <span style="opacity:.7;font-size:12px;">Free · No login required</span>
+      </a>
+    </div>
+    <div style="flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+      <svg class="dna-svg" width="280" height="400" viewBox="0 0 280 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#00d4ff" stop-opacity=".15"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </radialGradient>
+        </defs>
+        <ellipse cx="140" cy="200" rx="110" ry="185" fill="url(#glow)"/>
+        <!-- DNA strands -->
+        <path d="M 80 30 C 200 30, 200 100, 80 100 C 200 100, 200 170, 80 170 C 200 170, 200 240, 80 240 C 200 240, 200 310, 80 310 C 200 310, 200 380, 80 380" stroke="#00d4ff" stroke-width="3" fill="none" opacity="0.8"/>
+        <path d="M 200 30 C 80 30, 80 100, 200 100 C 80 100, 80 170, 200 170 C 80 170, 80 240, 200 240 C 80 240, 80 310, 200 310 C 80 310, 80 380, 200 380" stroke="#a855f7" stroke-width="3" fill="none" opacity="0.8"/>
+        <!-- Rungs -->
+        <line x1="140" y1="30" x2="140" y2="30" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+        <line x1="115" y1="65" x2="165" y2="65" stroke="#a855f7" stroke-width="2.5" opacity="0.7"/>
+        <line x1="100" y1="100" x2="180" y2="100" stroke="#00d4ff" stroke-width="2.5" opacity="0.7"/>
+        <line x1="108" y1="135" x2="172" y2="135" stroke="#a855f7" stroke-width="2.5" opacity="0.7"/>
+        <line x1="140" y1="170" x2="140" y2="170" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+        <line x1="115" y1="205" x2="165" y2="205" stroke="#a855f7" stroke-width="2.5" opacity="0.7"/>
+        <line x1="100" y1="240" x2="180" y2="240" stroke="#00d4ff" stroke-width="2.5" opacity="0.7"/>
+        <line x1="108" y1="275" x2="172" y2="275" stroke="#a855f7" stroke-width="2.5" opacity="0.7"/>
+        <line x1="140" y1="310" x2="140" y2="310" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+        <line x1="115" y1="345" x2="165" y2="345" stroke="#a855f7" stroke-width="2.5" opacity="0.7"/>
+        <!-- Nodes -->
+        <circle cx="115" cy="65" r="5" fill="#a855f7" opacity="0.9"/>
+        <circle cx="165" cy="65" r="5" fill="#a855f7" opacity="0.9"/>
+        <circle cx="100" cy="100" r="5" fill="#00d4ff" opacity="0.9"/>
+        <circle cx="180" cy="100" r="5" fill="#00d4ff" opacity="0.9"/>
+        <circle cx="108" cy="135" r="4" fill="#a855f7" opacity="0.7"/>
+        <circle cx="172" cy="135" r="4" fill="#a855f7" opacity="0.7"/>
+        <circle cx="115" cy="205" r="5" fill="#a855f7" opacity="0.9"/>
+        <circle cx="165" cy="205" r="5" fill="#a855f7" opacity="0.9"/>
+        <circle cx="100" cy="240" r="5" fill="#00d4ff" opacity="0.9"/>
+        <circle cx="180" cy="240" r="5" fill="#00d4ff" opacity="0.9"/>
+        <circle cx="115" cy="345" r="4" fill="#a855f7" opacity="0.7"/>
+        <circle cx="165" cy="345" r="4" fill="#a855f7" opacity="0.7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Main App -->
+  <main>
+    <section id="upload-section" style="max-width:900px;margin:0 auto 80px;scroll-margin-top:80px;">
+      <div class="section-title">Upload Your VCF File</div>
+      <p class="section-sub">Your file is processed securely — we never store genetic data.</p>
+
+      <!-- Upload Zone -->
+      <div class="glass-elevated" style="padding:32px;margin-bottom:32px;">
+        <div id="upload-zone" class="upload-zone">
+          <div style="font-size:48px;margin-bottom:16px;">🧬</div>
+          <p style="font-size:18px;font-weight:700;margin-bottom:8px;">Drop your VCF file here</p>
+          <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px;">or click to browse · VCF v4.2 format · Max 5 MB</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+            <span class="chip chip-cyan">VCF v4.2</span>
+            <span class="chip">Max 5 MB</span>
+          </div>
+        </div>
+        <input type="file" id="file-input" accept=".vcf,.txt" style="display:none;" />
+
+        <!-- Sample files -->
+        <div style="margin-top:24px;">
+          <div class="section-label" style="margin-bottom:12px;text-align:center;">OR LOAD A SAMPLE VCF FILE</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+            <button id="sample-CYP2D6" class="btn-secondary">🧪 CYP2D6 – Codeine</button>
+            <button id="sample-CYP2C19" class="btn-secondary">🧪 CYP2C19 – Clopidogrel</button>
+            <button id="sample-CYP2C9" class="btn-secondary">🧪 CYP2C9 – Warfarin</button>
+            <button id="sample-SLCO1B1" class="btn-secondary">🧪 SLCO1B1 – Simvastatin</button>
+            <button id="sample-TPMT" class="btn-secondary">🧪 TPMT – Azathioprine</button>
+            <button id="sample-DPYD" class="btn-secondary">🧪 DPYD – Fluorouracil</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drug selection -->
+      <div class="glass-elevated" style="padding:32px;margin-bottom:32px;">
+        <div class="section-title" style="font-size:22px;text-align:left;margin-bottom:6px;">Select Drugs to Analyze</div>
+        <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px;">Click to select one or more drugs. You can also type a custom drug name.</p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;">
+          <button id="drug-CODEINE" class="drug-btn">💊 Codeine</button>
+          <button id="drug-WARFARIN" class="drug-btn">💊 Warfarin</button>
+          <button id="drug-CLOPIDOGREL" class="drug-btn">💊 Clopidogrel</button>
+          <button id="drug-SIMVASTATIN" class="drug-btn">💊 Simvastatin</button>
+          <button id="drug-AZATHIOPRINE" class="drug-btn">💊 Azathioprine</button>
+          <button id="drug-FLUOROURACIL" class="drug-btn">💊 Fluorouracil</button>
+        </div>
+
+        <div>
+          <div class="section-label" style="margin-bottom:8px;">CUSTOM DRUG (optional)</div>
+          <input id="custom-drug" type="text" class="input-field" placeholder="e.g. Tamoxifen, Imipramine, Metoprolol..." style="max-width:420px;" />
+        </div>
+      </div>
+
+      <!-- Analyze button -->
+      <div style="text-align:center;">
+        <button id="analyze-btn" class="btn-primary" style="font-size:18px;padding:18px 48px;">
+          🧬 Run Pharmacogenomic Analysis
+        </button>
+        <p style="margin-top:16px;font-size:13px;color:var(--text-muted);">Analysis takes 2–5 seconds · No data is stored</p>
+      </div>
+    </section>
+
+    <!-- Error section -->
+    <section id="error-section" class="hidden" style="max-width:900px;margin:0 auto 40px;">
+      <div class="error-box">
+        <div style="font-size:20px;font-weight:700;color:var(--rose);margin-bottom:8px;">❌ Analysis Failed</div>
+        <p id="error-msg" style="color:var(--text-secondary);"></p>
+      </div>
+    </section>
+
+    <!-- Results section -->
+    <section id="results-section" class="hidden" style="max-width:1100px;margin:0 auto;">
+      <div class="section-title" style="margin-bottom:8px;">Analysis Results</div>
+      <p class="section-sub">Pharmacogenomic risk assessment based on your genetic profile and CPIC guidelines.</p>
+
+      <!-- Summary bar -->
+      <div class="results-header" id="results-summary"></div>
+
+      <!-- Drug tabs -->
+      <div id="drug-tabs" style="margin-bottom:24px;"></div>
+
+      <!-- Result detail -->
+      <div id="result-detail"></div>
+    </section>
+  </main>
+
+  <!-- How it works -->
+  <section style="padding:60px max(24px,calc((100% - 1280px)/2));border-top:1px solid var(--border-subtle);">
+    <div class="section-title">How It Works</div>
+    <p class="section-sub">Three steps to personalized pharmacogenomics</p>
+    <div class="grid-3" style="max-width:900px;margin:0 auto;">
+      <div class="stat-box" style="padding:32px;text-align:left;">
+        <div style="font-size:36px;margin-bottom:16px;">📁</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">1. Upload VCF</h3>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8;">Upload your Variant Call Format (VCF v4.2) file containing your genetic variants. Or use our sample files.</p>
+      </div>
+      <div class="stat-box" style="padding:32px;text-align:left;">
+        <div style="font-size:36px;margin-bottom:16px;">🔬</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">2. Genetic Analysis</h3>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8;">Our engine identifies CPIC-relevant pharmacogenes, infers diplotypes, and predicts metabolizer phenotypes (PM/IM/NM/RM/URM).</p>
+      </div>
+      <div class="stat-box" style="padding:32px;text-align:left;">
+        <div style="font-size:36px;margin-bottom:16px;">🤖</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">3. AI Explanation</h3>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8;">Google Gemini AI generates plain-language clinical explanations with mechanism, dosing recommendations, and monitoring parameters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p style="margin-bottom:8px;">
+      <span class="gradient-text" style="font-weight:700;font-size:16px;">PharmaGuard</span> · RIFT 2026 Hackathon · Pharmacogenomics AI Track
+    </p>
+    <p style="margin-bottom:12px;">
+      ⚠️ For research and educational purposes only. Not a substitute for professional medical or pharmacogenomic testing.
+    </p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <span class="chip chip-cyan">CPIC Guidelines</span>
+      <span class="chip chip-violet">Gemini 1.5 Flash</span>
+      <span class="chip">Node.js Serverless</span>
+      <span class="chip">VCF v4.2</span>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
