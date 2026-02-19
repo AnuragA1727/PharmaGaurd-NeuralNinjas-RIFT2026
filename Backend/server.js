@@ -3,9 +3,9 @@ const multer = require("multer");
 const fs = require("fs");
 const cors = require("cors");
 
-const { readVCF } = require("./vcfReader.js");
+const { readVCF } = require("./Services/vcfReader.js");
 const { extractGenes } = require("./Services/geneExtractor.js");
-const { formatResponse } = require("./responseFormatter.js");
+const { formatResponse } = require("./Services/responseFormatter.js");
 
 const app = express();
 app.use(cors());
