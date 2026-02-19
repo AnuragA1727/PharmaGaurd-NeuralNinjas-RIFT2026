@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Precision Medicine Algorithm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Precision Medicine Algorithm</h1>
+  <h2>AI-Driven Pharmacogenomic Risk Prediction</h2>
+
+  <div class="input-box" id="inputBox">
+    <div class="placeholder" id="placeholderText">
+      Drag & Drop .vcf File<br>
+      OR<br>
+      Click to Upload / Paste VCF Data
+    </div>
+    <textarea id="textInput"></textarea>
+    <input type="file" id="fileInput" accept=".vcf">
+  </div>
+
+  <button id="analyzeBtn">Analyze Risk</button>
+</div>
+
+<script src="./logic.js"></script>
+</body>
+</html>
