@@ -9,7 +9,7 @@ PharmaGuard analyzes your genetic VCF data to predict personalized drug risks us
 
 ## 🌐 Live Demo
 
-**[https://pharma-guard.vercel.app](https://pharma-guard.vercel.app)** ← Replace with your deployed URL
+**[Live Link](https://pharma-gaurd-neural-ninjas-rift-202-self.vercel.app/)** ← Deployed URL
 
 ---
 
@@ -23,23 +23,29 @@ Tagged: RIFT 2026 · #RIFT2026 #PharmaGuard #Pharmacogenomics #AIinHealthcare
 ## 🏗 Architecture Overview
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│  Browser (Next.js 16 + React 19)                             │
-│  ┌────────────┐  ┌──────────────┐  ┌──────────────────────┐ │
-│  │ VCF Upload │  │ Drug Selector│  │   Results Panel      │ │
-│  │ Drag+Drop  │  │ Multi-select │  │   Color-coded risks  │ │
-│  └────────────┘  └──────────────┘  └──────────────────────┘ │
-└──────────────────────────────────┬───────────────────────────┘
-                                   │ POST /api/analyze
-                                   ▼
-┌──────────────────────────────────────────────────────────────┐
-│  Next.js API Routes (Edge Runtime)                           │
-│  ┌───────────────┐  ┌──────────────┐  ┌──────────────────┐  │
-│  │  VCF Parser   │  │  Pharma      │  │  LLM Explainer   │  │
-│  │  (vcfParser)  │→ │  Engine      │→ │  (Gemini 1.5 /   │  │
-│  │  VCF v4.2     │  │  pharmEngine │  │   Rule-based)    │  │
-│  └───────────────┘  └──────────────┘  └──────────────────┘  │
-└──────────────────────────────────────────────────────────────┘
+pharma/
+├── public/                  ← Static frontend (served as-is)
+│   ├── index.html           ← Full UI: hero, upload, drug select, results
+│   ├── style.css            ← Complete design system (glassmorphism, animations)
+│   └── app.js               ← All frontend logic (VCF reading, API calls, rendering)
+│
+├── lib/                     ← Shared Node.js modules (no dependencies)
+│   ├── vcfParser.js         ← VCF v4.2 parser (CommonJS)
+│   ├── pharmEngine.js       ← CPIC pharma engine (CommonJS)
+│   └── llmExplainer.js      ← Gemini API + rule-based fallback
+│
+├── api/                     ← Vercel serverless functions
+│   └── analyze.js           ← POST /api/analyze
+│
+├── netlify/
+│   └── functions/
+│       └── analyze.js       ← Same logic, Netlify exports.handler format
+│
+├── vercel.json              ← Vercel config (framework: null, public output)
+├── netlify.toml             ← Netlify config (redirects /api/* → functions)
+├── package.json             ← Zero runtime dependencies
+└── .env.example             ← GEMINI_API_KEY placeholder
+
 ```
 
 ### Tech Stack
