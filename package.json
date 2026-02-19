@@ -1,6 +1,25 @@
 {
   "dependencies": {
     "cors": "^2.8.6",
-    "express": "^5.2.1"
-  }
+    "express": "^5.2.1",
+    "multer": "^2.0.2"
+  },
+  "name": "pharmagaurd-neuralninjas-rift2026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "logic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnuragA1727/PharmaGaurd-NeuralNinjas-RIFT2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnuragA1727/PharmaGaurd-NeuralNinjas-RIFT2026/issues"
+  },
+  "homepage": "https://github.com/AnuragA1727/PharmaGaurd-NeuralNinjas-RIFT2026#readme"
 }
