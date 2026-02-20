@@ -148,7 +148,6 @@ PharmaGuard generates structured JSON strictly matching the required schema:
   }
 }
 ```
-
 ---
 
 ## 🎨 Web Interface Features
@@ -264,5 +263,3 @@ cd pharmaguard
 - Edge case handling  
 - Test case validation  
 - Deployment  
-
-
