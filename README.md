@@ -9,6 +9,10 @@
 🔗 **Live Deployed App (Vercel):**  
 https://pharma-gaurd-neural-ninjas-rift-202-self.vercel.app/
 
+![Demo1](1.png)
+![Demo1](2.png)
+![Demo1](3.png)
+
 🎥 **LinkedIn Demo Video (Public):**  
 https://www.linkedin.com/feed/update/urn:li:activity:7430405237133287424/ 
 
